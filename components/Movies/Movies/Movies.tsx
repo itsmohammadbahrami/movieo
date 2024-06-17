@@ -3,7 +3,7 @@
 import { string, testIds } from "@/utils";
 import { Skeleton } from "@/base";
 import useMovies from "./useMovies";
-import Movie from "./Movie";
+import Movie from "./movie";
 
 const Movies = () => {
   const { filteredMovies, status } = useMovies();

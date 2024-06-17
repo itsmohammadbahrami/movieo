@@ -6,8 +6,8 @@ export const string = {
   },
   movies: {
     back: "بازگشت",
-    genre: (category: string) => `ژانر${category ? ': ' + getCategoryLabel(category) : ''}`,
-    rateMovie: (sort: string) => `امتیاز فیلم${sort ? ': ' + getRateLabel(sort) : ''}`,
+    genre: (category?: string) => `ژانر${category ? ': ' + getCategoryLabel(category) : ''}`,
+    rateMovie: (sort?: string) => `امتیاز فیلم${sort ? ': ' + getRateLabel(sort) : ''}`,
     rate: "امتیاز:",
     title: "لیست تمامی فیلم و سریال ها",
   },
