@@ -69,8 +69,8 @@ export const selectFilteredAndSortedMovies = createSelector(
   (movies, filter, sort) => {
     let filteredMovies = filter
       ? movies.filter((movie) =>
-          movie.categories.some((category) => filter === category.title_en)
-        )
+        movie.categories.some((category) => filter === category.title_en)
+      )
       : movies;
 
     if (sort) {
