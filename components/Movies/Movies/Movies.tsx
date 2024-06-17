@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import useMovies from "@/components/Movies/MovieList/useMovies";
+import useMovies from "./useMovies";
 import MovieItem from "./MovieItem";
 import { string, testIds } from "@/utils";
 import { Skeleton } from "@/base";

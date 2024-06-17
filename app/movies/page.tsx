@@ -1,9 +1,9 @@
-import { Header, Movies } from "@/components";
+import { Header, MoviesList } from "@/components";
 
 const Movies = () => (
   <>
     <Header />
-    <Movies />
+    <MoviesList />
   </>
 );
 
