@@ -1,12 +1,10 @@
-import { Header, MovieList } from "@/components";
+import { Header, Movies } from "@/components";
 
-const Movies = () => {
-  return (
-    <>
-      <Header />
-      <MovieList />
-    </>
-  );
-};
+const Movies = () => (
+  <>
+    <Header />
+    <Movies />
+  </>
+);
 
 export default Movies;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { RootState, fetchMovies, selectFilteredAndSortedMovies } from "@/redux";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 
-const useMovieList = () => {
+const useMovies = () => {
   const dispatch = useAppDispatch();
   const { filteredMovies } = useAppSelector((state: RootState) =>
     selectFilteredAndSortedMovies(state)
@@ -18,4 +18,4 @@ const useMovieList = () => {
   return { filteredMovies, status };
 };
 
-export default useMovieList;
+export default useMovies;

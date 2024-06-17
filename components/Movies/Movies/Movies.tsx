@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 
-import useMovieList from "@/components/Movies/MovieList/useMovieList";
+import useMovies from "@/components/Movies/MovieList/useMovies";
 import MovieItem from "./MovieItem";
 import { string, testIds } from "@/utils";
 import { Skeleton } from "@/base";
 
-const MovieList = () => {
-  const { filteredMovies, status } = useMovieList();
+const Movies = () => {
+  const { filteredMovies, status } = useMovies();
 
   if (status === "loading" || status === "idle") {
     return (
@@ -40,4 +40,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default Movies;
