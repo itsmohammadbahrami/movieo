@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { IMovie } from "@/types";
 import { string } from "@/utils";
 
@@ -7,7 +5,7 @@ type MovieDetailsProps = {
   movie: IMovie;
 };
 
-const MovieDetails: FC<MovieDetailsProps> = ({ movie }) => (
+const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => (
   <div className="flex flex-row justify-between items-center mt-1">
     <div className="text-[11px] w-1/2 text-gray-200 truncate">
       {movie.movie_title}

@@ -1,14 +1,15 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 
-import ImageWithFallback from "@/base/image-fallback/ImageFallBack";
-import { HoverOverlay } from "../HoverOverlay";
+import { ImageFallBack } from "@/base";
+import { HoverOverlay } from "./hover-overlay";
 import { IMovie } from "@/types";
+import classNames from "classnames";
 
-type HoverableImageProps = {
+type Props = {
   movie: IMovie;
 };
 
-const HoverableImage: FC<HoverableImageProps> = ({ movie }) => {
+const MovieImage: React.FC<Props> = ({ movie }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -17,18 +18,19 @@ const HoverableImage: FC<HoverableImageProps> = ({ movie }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <ImageWithFallback
+      <ImageFallBack
         width={300}
         height={400}
         src={movie.pic.movie_img_m}
         fallbackSrc={movie.pic.movie_img_m}
         alt={movie.movie_title}
-        className={`rounded-lg transition-all duration-300 ${hovered ? "brightness-100 opacity-15" : ""
-          }`}
+        className={classNames('rounded-lg transition-all duration-300', {
+          "brightness-100 opacity-15": hovered
+        })}
       />
       {hovered && <HoverOverlay movie={movie} />}
     </div>
   );
 };
 
-export default HoverableImage;
+export default MovieImage;
