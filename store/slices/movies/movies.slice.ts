@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { fetchMovies } from "@/store";
-import { MoviesState, Movie as MoviesType } from "@/types";
+import { IMoviesState, IMovie } from "@/types";
 
-const initialState: MoviesState = {
+const initialState: IMoviesState = {
   movies: [],
   filter: "",
   sort: "",
@@ -35,7 +35,7 @@ const moviesSlice = createSlice({
       })
       .addCase(
         fetchMovies.fulfilled,
-        (state, action: PayloadAction<MoviesType[]>) => {
+        (state, action: PayloadAction<IMovie[]>) => {
           state.status = "succeeded";
           state.movies = action.payload;
         }

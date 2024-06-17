@@ -2,10 +2,10 @@ import { FC, useState } from "react";
 
 import ImageWithFallback from "@/base/image-fallback/ImageFallBack";
 import { HoverOverlay } from "../HoverOverlay";
-import { Movie } from "@/types";
+import { IMovie } from "@/types";
 
 type HoverableImageProps = {
-  movie: Movie;
+  movie: IMovie;
 };
 
 const HoverableImage: FC<HoverableImageProps> = ({ movie }) => {

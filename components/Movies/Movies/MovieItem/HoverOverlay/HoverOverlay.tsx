@@ -1,10 +1,10 @@
 import { FC } from "react";
 
 import { MdThumbUpAlt } from "react-icons/md";
-import { Movie } from "@/types";
+import { IMovie } from "@/types";
 
 type HoverOverlayProps = {
-  movie: Movie;
+  movie: IMovie;
 };
 
 const HoverOverlay: FC<HoverOverlayProps> = ({ movie }) => (

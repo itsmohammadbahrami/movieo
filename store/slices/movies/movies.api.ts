@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { Movie as MoviesType } from "@/types";
+import { IMovie as MoviesType } from "@/types";
 
 export const fetchMovies = createAsyncThunk<MoviesType[]>(
   "movies/fetchMovies",

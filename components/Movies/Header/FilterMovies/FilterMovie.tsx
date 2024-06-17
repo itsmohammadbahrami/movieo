@@ -2,17 +2,17 @@
 import React, { Suspense } from "react";
 
 import useFilterMovies from "./useFilterMovies";
-import { FilterItemsInterface } from "@/types";
+import { IFilterItems } from "@/types";
 import { string, testIds } from "@/utils";
 import { Loading, Select } from "@/base";
 
-const genres: FilterItemsInterface[] = [
+const genres: IFilterItems[] = [
   { label: "درام", value: "drama" },
   { label: "کمدی", value: "comedy" },
   { label: "علمی تخیلی", value: "sci-fi" },
   { label: "اکشن", value: "action" },
 ];
-const rateRange: FilterItemsInterface[] = [
+const rateRange: IFilterItems[] = [
   { label: "بالاترین امتیاز", value: "highest" },
   { label: "پایین ترین امتیاز", value: "lowest" },
 ];

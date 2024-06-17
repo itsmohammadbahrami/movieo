@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-import { Movie } from "@/types";
+import { IMovie } from "@/types";
 import { HoverableImage } from "./HoverableImage";
 import { MovieDetails } from "./MovieDetails";
 
 type Props = {
-  movie: Movie;
+  movie: IMovie;
   testId?: string;
 };
 

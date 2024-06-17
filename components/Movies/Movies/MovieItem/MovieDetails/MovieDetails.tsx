@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-import { Movie } from "@/types";
+import { IMovie } from "@/types";
 import { string } from "@/utils";
 
 type MovieDetailsProps = {
-  movie: Movie;
+  movie: IMovie;
 };
 
 const MovieDetails: FC<MovieDetailsProps> = ({ movie }) => (

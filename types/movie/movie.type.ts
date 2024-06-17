@@ -1,4 +1,4 @@
-interface Serial {
+interface ISerial {
   enable: boolean;
   parent_title: string;
   season_id: number;
@@ -8,7 +8,7 @@ interface Serial {
   last_part: string;
 }
 
-interface RelData {
+interface IRelData {
   rel_type: string;
   rel_id: string;
   rel_uid: any;
@@ -16,7 +16,7 @@ interface RelData {
   rel_type_txt: string;
 }
 
-interface Badge {
+interface IBadge {
   free: boolean;
   backstage: boolean;
   vision: boolean;
@@ -27,42 +27,40 @@ interface Badge {
   info: any[];
 }
 
-interface Pic {
+interface IPic {
   movie_img_s: string;
   movie_img_m: string;
   movie_img_b: string;
 }
 
-interface Categories {
+interface ICategories {
   title_en: string;
   title: string;
   link_type: string;
   link_key: string;
 }
 
-interface Duration {
+interface IDuration {
   value: number;
   text: string;
 }
 
-interface Countries {
+interface ICountries {
   country: string;
   country_en: string;
 }
 
-interface TextStatus {
+interface ITextStatus {
   enable: boolean;
   text: string;
 }
 
-interface Audio {
+interface IAudio {
   languages: string[];
   isMultiLanguage: boolean;
 }
 
-interface LanguageInfo { }
-
-export interface Movie {
+export interface IMovie {
   type: string;
   id: string;
   link_type: string;
@@ -74,31 +72,30 @@ export interface Movie {
   movie_title: string;
   movie_title_en: string;
   tag_id: string;
-  serial: Serial;
+  serial: ISerial;
   watermark: boolean;
   HD: boolean;
   watch_list_action: string;
   commingsoon_txt: string;
-  rel_data: RelData;
-  badge: Badge;
+  rel_data: IRelData;
+  badge: IBadge;
   rate_enable: boolean;
   rate_enable_by_cnt: boolean;
   descr: string;
   cover: string;
   publish_date: string;
   age_range: string;
-  pic: Pic;
+  pic: IPic;
   rate_avrage: string;
   avg_rate_label: string;
   pro_year: string;
   imdb_rate: string;
-  categories: Categories[];
-  duration: Duration;
-  countries: Countries[];
-  dubbed: TextStatus;
-  subtitle: TextStatus;
-  audio: Audio;
-  language_info: LanguageInfo;
+  categories: ICategories[];
+  duration: IDuration;
+  countries: ICountries[];
+  dubbed: ITextStatus;
+  subtitle: ITextStatus;
+  audio: IAudio;
   director: string;
   last_watch: any;
   freemium: boolean;
@@ -107,8 +104,8 @@ export interface Movie {
   uuid: any;
 }
 
-export interface MoviesState {
-  movies: Movie[];
+export interface IMoviesState {
+  movies: IMovie[];
   filter: string;
   sort: string;
   status: "idle" | "loading" | "succeeded" | "failed";
