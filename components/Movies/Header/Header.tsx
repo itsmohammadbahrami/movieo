@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div
       data-testid={testIds.movies.header}
-      className="relative w-screen bg-gray-850 bg-opacity-5 px-8 pt-14 pb-8"
+      className="w-screen bg-[#161616] px-8 pt-14 pb-8 sticky top-0 z-10"
     >
       <Link
         data-testid={testIds.movies.backLink}
