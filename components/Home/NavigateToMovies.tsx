@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+
 import Link from "next/link";
 
-import { string, testIds } from "@/utils";
 import useHomePage from "./useHomePage";
+import { string, testIds } from "@/utils";
 
-const MoviesLink = () => {
+const NavigateToMovies = () => {
   const query = useHomePage();
+
   return (
     <Link
       className="bg-yellow-500 text-3xl p-3 rounded-lg"
@@ -18,4 +19,4 @@ const MoviesLink = () => {
   );
 };
 
-export default MoviesLink;
+export default NavigateToMovies;

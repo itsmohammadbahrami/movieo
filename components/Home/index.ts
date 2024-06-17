@@ -1,1 +1,1 @@
-export { default as MoviesLink } from "./MoviesLink";
+export { default as NavigateToMovies } from "./NavigateToMovies";
