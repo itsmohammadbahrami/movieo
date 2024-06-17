@@ -2,12 +2,12 @@
 import classNames from "classnames";
 
 import useSelect from "./useSelect";
-import { IFilterItems } from "@/types";
+import { IFilterItem } from "@/types";
 import { SelectButton } from "./select-button";
 import { Dropdown } from "./dropdown";
 
 interface Props {
-  items: IFilterItems[];
+  items: IFilterItem[];
   handleChange: (item: string) => void;
   col?: number;
   title: string;

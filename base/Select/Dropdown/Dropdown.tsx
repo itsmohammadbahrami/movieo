@@ -1,10 +1,10 @@
 import classNames from "classnames";
 
 import { Checkbox } from "@/base";
-import { IFilterItems } from "@/types";
+import { IFilterItem } from "@/types";
 
 interface Props {
-  items: IFilterItems[];
+  items: IFilterItem[];
   col: number;
   selectedItem: string;
   handleSelect: (value: string) => void;

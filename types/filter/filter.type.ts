@@ -6,7 +6,7 @@ export interface IFilterType {
   ratingSort?: string;
 }
 
-export interface IFilterItems {
+export interface IFilterItem {
   label: string;
   value: ICategory | IRatingSort;
 }

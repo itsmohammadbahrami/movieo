@@ -1,9 +1,9 @@
-import React from "react";
 import Link from "next/link";
 
-import FilterMovie from "./FilterMovies";
-import { paths, string, testIds } from "@/utils";
 import { MdArrowBackIos } from "react-icons/md";
+
+import { paths, string, testIds } from "@/utils";
+import MovieFilter from './movie-filter';
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
         {string.movies.back}
         <MdArrowBackIos />
       </Link>
-      <FilterMovie />
+      <MovieFilter />
     </div>
   );
 };

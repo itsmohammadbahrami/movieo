@@ -1,2 +1,2 @@
-export { default as Header } from "./Header";
-export { default as MoviesList } from "./Movies";
+export { default as Header } from "./header";
+export { default as MoviesList } from "./movies";
