@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import FilterMovie from "./FilterMovies";
-import { string, testIds } from "@/utils";
+import { paths, string, testIds } from "@/utils";
 import { MdArrowBackIos } from "react-icons/md";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
       <Link
         data-testid={testIds.movies.backLink}
         className="inline-flex items-center justify-end absolute top-5 left-16"
-        href={string.path.home}
+        href={paths.home}
       >
         {string.movies.back}
         <MdArrowBackIos />

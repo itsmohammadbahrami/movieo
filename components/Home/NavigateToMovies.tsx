@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import useHomePage from "./useHomePage";
-import { string, testIds } from "@/utils";
+import { paths, string, testIds } from "@/utils";
 
 const NavigateToMovies = () => {
   const query = useHomePage();
@@ -11,7 +11,7 @@ const NavigateToMovies = () => {
   return (
     <Link
       className="bg-yellow-500 text-3xl p-3 rounded-lg"
-      href={{ pathname: string.path.movies, query }}
+      href={{ pathname: paths.movies, query }}
       data-testid={testIds.home.moviesLink}
     >
       {string.home.moviesLink}
