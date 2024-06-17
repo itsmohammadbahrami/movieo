@@ -8,7 +8,7 @@ interface SkeletonProps {
 const Skeleton: React.FC<SkeletonProps> = ({
   width = "w-full",
   height = "h-5",
-  borderRadius = "rounded",
+  borderRadius = "rounded-lg",
   additionalClasses = "",
 }) => {
   return (

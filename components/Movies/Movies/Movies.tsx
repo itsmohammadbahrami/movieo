@@ -34,11 +34,10 @@ const Movies = () => {
 };
 
 const MoviesSkeleton = () => (
-  <div className="p-6">
+  <div className="pt-6">
+    <span className="pr-2 text-xl max-sm:text-lg ms-6">{string.movies.title}</span>
 
-    <span className="pr-2 text-xl max-sm:text-lg">{string.movies.title}</span>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 p-8">
+    <div className="grid grid-cols-1 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-8 pt-6">
       {Array(12)
         .fill(undefined)
         .map((_, index) => (
