@@ -35,7 +35,7 @@ const Dropdown: FC<DropdownProps> = ({
         >
           <Checkbox
             data-testid={`${testId}-item-${item.value}`}
-            checkedItems={selectedItem === item.value}
+            checked={selectedItem === item.value}
             onChange={() => handleSelect(item.value)}
           />
           {item.label}
