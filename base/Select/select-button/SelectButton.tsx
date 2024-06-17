@@ -1,16 +1,14 @@
-import { FC } from "react";
-
 import classNames from "classnames";
 import { MdArrowDropDown } from "react-icons/md";
 
-interface SelectButtonProps {
+interface Props {
   isOpen: boolean;
   title: string;
   toggleOpen: () => void;
   testId?: string;
 }
 
-const SelectButton: FC<SelectButtonProps> = ({
+const SelectButton: React.FC<Props> = ({
   isOpen,
   title,
   toggleOpen,

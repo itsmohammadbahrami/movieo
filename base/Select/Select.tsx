@@ -1,10 +1,9 @@
 "use client";
-import { FC } from "react";
-
 import classNames from "classnames";
+
 import useSelect from "./useSelect";
 import { FilterItemsInterface } from "@/types";
-import { SelectButton } from "./SelectButton";
+import { SelectButton } from "./select-button";
 import { Dropdown } from "./dropdown";
 
 interface Props {
@@ -17,7 +16,7 @@ interface Props {
   testId?: string;
 }
 
-const Select: FC<Props> = ({
+const Select: React.FC<Props> = ({
   items,
   handleChange,
   col = 2,
