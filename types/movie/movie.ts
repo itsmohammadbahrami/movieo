@@ -60,7 +60,7 @@ interface Audio {
   isMultiLanguage: boolean;
 }
 
-interface LanguageInfo {}
+interface LanguageInfo { }
 
 export interface Movie {
   type: string;
@@ -105,4 +105,12 @@ export interface Movie {
   position: any;
   sid: any;
   uuid: any;
+}
+
+export interface MoviesState {
+  movies: Movie[];
+  filter: string;
+  sort: string;
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
 }

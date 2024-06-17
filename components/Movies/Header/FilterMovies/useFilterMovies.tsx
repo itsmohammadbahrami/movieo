@@ -12,7 +12,7 @@ import {
   selectFilteredAndSortedMovies,
   setFilter,
   setSort,
-} from "@/redux";
+} from "@/store";
 
 const useFilterMovies = () => {
   const firstRender = useRef(true);

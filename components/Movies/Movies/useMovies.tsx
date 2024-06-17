@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import { RootState, fetchMovies, selectFilteredAndSortedMovies } from "@/redux";
-import { useAppDispatch, useAppSelector } from "@/redux";
+import { RootState, fetchMovies, selectFilteredAndSortedMovies } from "@/store";
+import { useAppDispatch, useAppSelector } from "@/store";
 
 const useMovies = () => {
   const dispatch = useAppDispatch();
