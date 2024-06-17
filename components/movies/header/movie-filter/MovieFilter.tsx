@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { movieGenres, movieRates, string, testIds } from "@/utils";
 import { Loading, Select } from "@/base";
 import useFilterMovies from "./useFilterMovies";
-import useHomePage from "@/components/homee/useHomePage";
+import useHomePage from "@/components/home/useHomePage";
 
 const MovieFilter = () => {
   return (

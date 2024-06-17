@@ -1,2 +1,2 @@
-export * from "./homee";
-export * from './moviess';
+export * from "./home";
+export * from './movies';
