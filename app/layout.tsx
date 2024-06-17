@@ -1,27 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import StoreProvider from "./StoreProvider";
-import "./globals.css";
 
-const IranSansFont = localFont({
-  src: [
-    {
-      path: "../assets/fonts/iransans-light.ttf",
-      weight: "400",
-      style: "light",
-    },
-    {
-      path: "../assets/fonts/iransans-regular.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/iransans-bold.ttf",
-      weight: "700",
-      style: "bold",
-    },
-  ],
-});
+import StoreProvider from "./StoreProvider";
+import { IranSansFont } from "@/assets";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Movies",
