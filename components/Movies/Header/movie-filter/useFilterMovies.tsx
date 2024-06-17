@@ -39,7 +39,7 @@ const useFilterMovies = () => {
       }
       router.push(`${pathname}?${newParams.toString()}`);
     },
-    [router, newParams]
+    [router, newParams] //eslint-disable-line
   );
 
   const handleRateFilter = useCallback(
@@ -54,7 +54,7 @@ const useFilterMovies = () => {
       }
       router.push(`${pathname}?${newParams.toString()}`);
     },
-    [router, newParams]
+    [router, newParams] //eslint-disable-line
   );
 
   useEffect(() => {

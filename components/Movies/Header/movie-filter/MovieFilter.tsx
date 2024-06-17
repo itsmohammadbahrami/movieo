@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { movieGenres, movieRates, string, testIds } from "@/utils";
 import { Loading, Select } from "@/base";
 import useFilterMovies from "./useFilterMovies";
+import useHomePage from "@/components/home/useHomePage";
 
 const MovieFilter = () => {
   return (
@@ -18,13 +19,14 @@ const MovieFilter = () => {
 
 const MovieFilterContent = () => {
   const { handleGenreFilter, handleRateFilter, newParams } = useFilterMovies();
+  const { category, sort } = useHomePage();
 
   return (
     <>
       <Select
         testId={testIds.movies.genreSelect}
         className="max-sm:w-full mt-3 w-1/3"
-        title={string.movies.genre}
+        title={string.movies.genre(category)}
         items={movieGenres}
         value={newParams.get("category") ?? undefined}
         handleChange={handleGenreFilter}
@@ -34,7 +36,7 @@ const MovieFilterContent = () => {
       <Select
         testId={testIds.movies.sortSelect}
         className="max-sm:w-full mt-3 w-1/3"
-        title={string.movies.rateMovie}
+        title={string.movies.rateMovie(sort)}
         items={movieRates}
         col={1}
         value={newParams.get("sort") ?? undefined}
