@@ -1,5 +1,5 @@
 export * from "./Select";
 export * from "./checkbox";
-export * from "./ImageFallBack";
+export * from "./image-fallback";
 export * from "./Skeleton";
 export * from "./Loading";

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import ImageWithFallback from "@/base/ImageFallBack/ImageFallBack";
+import ImageWithFallback from "@/base/image-fallback/ImageFallBack";
 import { HoverOverlay } from "../HoverOverlay";
 import { Movie } from "@/types";
 
@@ -23,9 +23,8 @@ const HoverableImage: FC<HoverableImageProps> = ({ movie }) => {
         src={movie.pic.movie_img_m}
         fallbackSrc={movie.pic.movie_img_m}
         alt={movie.movie_title}
-        className={`rounded-lg transition-all duration-300 ${
-          hovered ? "brightness-100 opacity-15" : ""
-        }`}
+        className={`rounded-lg transition-all duration-300 ${hovered ? "brightness-100 opacity-15" : ""
+          }`}
       />
       {hovered && <HoverOverlay movie={movie} />}
     </div>

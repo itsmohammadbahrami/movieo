@@ -1,12 +1,12 @@
-import { useState, FC } from "react";
-
 import Image, { ImageProps } from "next/image";
 
-interface ImageWithFallbackProps extends ImageProps {
+import { useState } from "react";
+
+interface Props extends ImageProps {
   fallbackSrc: string;
 }
 
-const ImageWithFallback: FC<ImageWithFallbackProps> = ({
+const ImageWithFallback: React.FC<Props> = ({
   src,
   fallbackSrc,
   alt,
@@ -14,16 +14,12 @@ const ImageWithFallback: FC<ImageWithFallbackProps> = ({
 }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
-  const handleError = () => {
-    setImgSrc(fallbackSrc);
-  };
-
   return (
     <Image
       {...props}
       src={imgSrc}
       alt={alt}
-      onError={handleError}
+      onError={() => setImgSrc(fallbackSrc)}
       loading="lazy"
     />
   );
