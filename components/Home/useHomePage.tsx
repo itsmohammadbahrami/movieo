@@ -1,5 +1,5 @@
 import { RootState, selectFilteredAndSortedMovies } from "@/redux";
-import { useAppSelector } from "@/hooks";
+import { useAppSelector } from "@/redux";
 
 const useHomePage = () => {
   const { filter, sort } = useAppSelector((state: RootState) =>

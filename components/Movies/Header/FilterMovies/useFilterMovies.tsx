@@ -1,16 +1,18 @@
 "use client";
+
 import { useCallback, useEffect, useRef } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-import { useAppDispatch, useAppSelector } from "@/hooks";
 import {
+  useAppDispatch,
+  useAppSelector,
+  RootState,
   clearFilter,
   clearSort,
   selectFilteredAndSortedMovies,
   setFilter,
   setSort,
-} from "@/redux/slices/movies";
-import { RootState } from "@/redux/store";
+} from "@/redux";
 
 const useFilterMovies = () => {
   const firstRender = useRef(true);
