@@ -1,4 +1,4 @@
-export * from "./Select";
+export * from "./select";
 export * from "./checkbox";
 export * from "./image-fallback";
 export * from "./Skeleton";

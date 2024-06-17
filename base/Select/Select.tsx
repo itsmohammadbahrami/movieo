@@ -5,7 +5,7 @@ import classNames from "classnames";
 import useSelect from "./useSelect";
 import { FilterItemsInterface } from "@/types";
 import { SelectButton } from "./SelectButton";
-import { Dropdown } from "./Dropdown";
+import { Dropdown } from "./dropdown";
 
 interface Props {
   items: FilterItemsInterface[];

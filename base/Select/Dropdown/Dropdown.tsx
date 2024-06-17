@@ -1,10 +1,9 @@
-import { FC } from "react";
-
 import classNames from "classnames";
-import { FilterItemsInterface } from "@/types";
-import { Checkbox } from "@/base";
 
-interface DropdownProps {
+import { Checkbox } from "@/base";
+import { FilterItemsInterface } from "@/types";
+
+interface Props {
   items: FilterItemsInterface[];
   col: number;
   selectedItem: string;
@@ -12,7 +11,7 @@ interface DropdownProps {
   testId?: string;
 }
 
-const Dropdown: FC<DropdownProps> = ({
+const Dropdown: React.FC<Props> = ({
   items,
   col,
   selectedItem,
