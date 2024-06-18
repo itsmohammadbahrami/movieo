@@ -7,11 +7,11 @@ describe("Check elements", () => {
   });
 
   it("Check back to home link", () => {
-    cy.findByTestId(testIds.movies.backLink).should("exist");
+    cy.findByTestId(testIds.movies.backToHome).should("exist");
   });
 
   it("Back to home link should have correct href", () => {
-    cy.findByTestId(testIds.movies.backLink)
+    cy.findByTestId(testIds.movies.backToHome)
       .should("have.attr", "href")
       .and("include", paths.home);
   });
@@ -29,8 +29,8 @@ describe("Check elements", () => {
   });
 
   it("Check movie list", () => {
-    cy.findByTestId(testIds.movies.movieList).should("be.visible");
-    cy.findByTestId(testIds.movies.movieList)
+    cy.findByTestId(testIds.movies.list).should("be.visible");
+    cy.findByTestId(testIds.movies.list)
       .children()
       .should("have.length.greaterThan", 0);
   });
@@ -53,7 +53,7 @@ describe("Functionality", () => {
 
     cy.url().should("include", "category=comedy");
 
-    cy.findByTestId(`${testIds.movies.movieItem}-0`)
+    cy.findByTestId(`${testIds.movies.item}-0`)
       .trigger("mouseover")
       .contains("کمدی");
   });
@@ -87,7 +87,7 @@ describe("Functionality", () => {
   });
 
   it("Should navigate to home page on click on back to home link", () => {
-    cy.findByTestId(testIds.movies.backLink).click();
+    cy.findByTestId(testIds.movies.backToHome).click();
     cy.url().should("include", paths.home);
   });
 

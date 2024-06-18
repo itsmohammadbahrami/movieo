@@ -2,6 +2,7 @@ import classNames from "classnames";
 
 import { Checkbox } from "@/base";
 import { IFilterItem } from "@/types";
+import { testIds } from "@/utils";
 
 interface Props {
   items: IFilterItem[];
@@ -20,7 +21,7 @@ const Dropdown: React.FC<Props> = ({
 }) => (
   <div
     className="absolute z-20 mt-2 shadow-lg bg-gray-850 w-full rounded-md p-4"
-    data-testid={`${testId}-dropdown`}
+    data-testid={testIds.movies.filterDropdown(testId ?? '')}
   >
     <div
       className={classNames("grid grid-cols-1 gap-4", {

@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { MdArrowDropDown } from "react-icons/md";
 
+import { testIds } from "@/utils";
+
 interface Props {
   isOpen: boolean;
   title: string;
@@ -17,7 +19,7 @@ const SelectButton: React.FC<Props> = ({
   <button
     onClick={toggleOpen}
     className="px-4 py-2 text-sm w-full flex justify-between items-center border-[#616160] border rounded-md text-right"
-    data-testid={`${testId}-button`}
+    data-testid={testIds.movies.filterButton(testId ?? '')}
   >
     {title}
     <MdArrowDropDown
