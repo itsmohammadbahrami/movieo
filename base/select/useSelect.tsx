@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-interface UseSelectProps {
+interface Props {
   initialValue?: string;
   handleChange: (item: string) => void;
 }
 
-const useSelect = ({ initialValue = "", handleChange }: UseSelectProps) => {
+const useSelect = ({ initialValue = "", handleChange }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>(initialValue);
   const dropdownRef = useRef<HTMLDivElement>(null);

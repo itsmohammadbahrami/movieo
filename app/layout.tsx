@@ -6,7 +6,7 @@ import { IranSansFont } from "@/assets";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Movies",
+  title: "Movieo",
   description: "A Simple Movie App",
 };
 
