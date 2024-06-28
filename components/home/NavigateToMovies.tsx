@@ -12,7 +12,7 @@ const NavigateToMovies = () => {
     <Link
       className="bg-yellow-500 text-3xl p-3 rounded-lg"
       href={{ pathname: paths.movies, query }}
-      data-testid={testIds.home.moviesLink}
+      data-testid={testIds.home.navigateToMovies}
     >
       {string.home.moviesLink}
     </Link>
